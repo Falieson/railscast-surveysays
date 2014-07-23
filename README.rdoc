@@ -27,7 +27,7 @@
       <%= link_to "remove", "#", class: "remove_fields" %>
   </div>
 
-* you can't use a div! Use fieldset instead
+you can't use a div! Use fieldset instead
   <fieldset>
       <%= f.label :content, "Answers" %>
       <%= f.text_field :content %>
