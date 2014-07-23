@@ -1,4 +1,7 @@
 == README
+Note: I got my personal project working after I figured out how to get the remove to work. I didn't finish going through the railscast tutorial and submitting this code.
+
+I recommend using this guide instead of mine: https://github.com/dnewkerk/nested-model-form . Just note to use <fieldset> !!
 
 === Getting Nested Forms to Work
 
