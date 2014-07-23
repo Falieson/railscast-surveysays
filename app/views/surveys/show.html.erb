@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @survey.name %>
+</p>
+<STRONG>Questions</STRONG>
+<ol class="questions">
+<% @survey.questions.each do |question| %>
+	<li>
+		<%= question.content %>
+		<ul class="answers">
+			<% question.answers.each do |answer| %>
+				<li><%= answer.content %></li>
+			<% end %>
+		</ul>
+	</li>
+<% end %>	
+
+</ol>
+
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>
