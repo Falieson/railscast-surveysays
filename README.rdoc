@@ -10,23 +10,22 @@
       4.times { question.answers.build }
     end
   end
-
-	def survey_params
-	  params.require(:survey).permit(
-	    :name,
-	    questions_attributes: [:id, :survey_id, :content, :_destroy,
-	      answers_attributes: [:id, :question_id, :content, :_destroy]])
-	end  
+  def survey_params
+    params.require(:survey).permit(
+    :name,
+    questions_attributes: [:id, :survey_id, :content, :_destroy,
+     answers_attributes: [:id, :question_id, :content, :_destroy]])
+  end  
 
 === Getting Remove to Work
 
 ====== app/views/surveys/_answer_fields.html.erb
-<fieldset>
-  <%= f.label :content, "Answer" %>
-  <%= f.text_field :content %>
-  <%= f.hidden_field :_destroy %>
-  <%= link_to "remove", '#', class: "remove_fields" %>
-</fieldset>
+<div class="field">
+    <%= f.label :content, "Answers" %>
+    <%= f.text_field :content %>
+    <%= f.hidden_field :_destroy %>
+    <%= link_to "remove", "#", class: "remove_fields" %>
+</div>
 
 
 ====== app/assets/javascript/survey.js.coffee
